@@ -7,7 +7,6 @@ This project implements a convolutional neural network (CNN) to detect emotions 
 
 - [Introduction](#introduction)
 - [Getting Started](#getting-started)
-- [Dataset](#dataset)
 - [Model Architecture](#model-architecture)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -22,29 +21,17 @@ The goal of this project is to develop an emotion detection model that can class
 
 These instructions will help you set up the project on your local machine for development and testing purposes.
 
-### Dataset
+## Model Architecture
+The model architecture consists of the following key components:
 
-The dataset used for training the model contains facial images organized into directories based on emotions. The directory structure is as follows:
+**Base Model**: The model uses MobileNet as the base for feature extraction. MobileNet is a lightweight deep learning architecture that is optimized for mobile devices, providing a good balance between speed and accuracy.
 
-/content/archive/
-    ├── train/
-    │   ├── Angry/
-    │   ├── Disgust/
-    │   ├── Fear/
-    │   ├── Happy/
-    │   ├── Sad/
-    │   ├── Surprise/
-    │   └── Neutral/
-    └── test/
-        ├── Angry/
-        ├── Disgust/
-        ├── Fear/
-        ├── Happy/
-        ├── Sad/
-        ├── Surprise/
-        └── Neutral/
+**Input Shape**: The input shape is set to (224, 224, 3), corresponding to RGB images of size 224x224 pixels.
+Flatten Layer: The output of the MobileNet base is flattened to convert the 2D feature maps into a 1D vector, which is necessary for feeding into the dense layers.
 
+**Dense Layer**: The flattened output is then passed to a dense layer with a softmax activation function. The number of units in this layer corresponds to the number of emotion classes (e.g., Angry, Disgust, Fear, Happy, Sad, Surprise, Neutral).
 
+**Compilation**: The model is compiled using the Adam optimizer and categorical crossentropy loss function, suitable for multi-class classification tasks.
 
 ### Installation
 
@@ -54,13 +41,26 @@ To run this project, you need to install the following dependencies:
 2. **TensorFlow**: 
    ```bash
    pip install tensorflow
-Usage
+3. **OpenCV**: `
+   ```bash
+   pip install opencv-python
+5. **Matplotlib**:
+   ```bash
+   pip install matplotlib
+7. **NumPy**:
+   ```bash
+   pip install numpy
+9. **Pandas**:
+    ```bash
+   pip install pandas
+
+## Usage
 Clone the repository or download the code files.
 Place the dataset in the correct directory structure as mentioned above.
 Open a Jupyter notebook or a Python script to run the code.
 
 
-Training the Model
+## Training the Model
 To train the model, run the provided code. It will:
 Load the dataset from the specified directories.
 Augment the training images for better generalization.
