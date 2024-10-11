@@ -12,7 +12,7 @@ This project implements a convolutional neural network (CNN) to detect emotions 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Training the Model](#training-the-model)
-- [License](#license)
+
 
 ## Introduction
 
@@ -25,23 +25,25 @@ These instructions will help you set up the project on your local machine for de
 ### Dataset
 
 The dataset used for training the model contains facial images organized into directories based on emotions. The directory structure is as follows:
-/content/archive/ 
-├── train/ 
-│    ├── Angry/ 
-│    ├── Disgust/ 
-│    ├── Fear/ 
-│    ├── Happy/ 
-│    ├── Sad/ 
-│    ├── Surprise/ 
-│    └── Neutral/ 
-└── test/ 
-      ├── Angry/ 
-      ├── Disgust/
-      ├── Fear/ 
-      ├── Happy/ 
-      ├── Sad/ 
-      ├── Surprise/ 
-      └── Neutral/
+
+/content/archive/
+    ├── train/
+    │   ├── Angry/
+    │   ├── Disgust/
+    │   ├── Fear/
+    │   ├── Happy/
+    │   ├── Sad/
+    │   ├── Surprise/
+    │   └── Neutral/
+    └── test/
+        ├── Angry/
+        ├── Disgust/
+        ├── Fear/
+        ├── Happy/
+        ├── Sad/
+        ├── Surprise/
+        └── Neutral/
+
 
 
 ### Installation
@@ -56,9 +58,10 @@ Usage
 Clone the repository or download the code files.
 Place the dataset in the correct directory structure as mentioned above.
 Open a Jupyter notebook or a Python script to run the code.
+
+
 Training the Model
 To train the model, run the provided code. It will:
-
 Load the dataset from the specified directories.
 Augment the training images for better generalization.
 Build a convolutional neural network (CNN) model using MobileNet.
