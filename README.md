@@ -25,7 +25,23 @@ These instructions will help you set up the project on your local machine for de
 ### Dataset
 
 The dataset used for training the model contains facial images organized into directories based on emotions. The directory structure is as follows:
-/content/archive/ ├── train/ │ ├── Angry/ │ ├── Disgust/ │ ├── Fear/ │ ├── Happy/ │ ├── Sad/ │ ├── Surprise/ │ └── Neutral/ └── test/ ├── Angry/ ├── Disgust/ ├── Fear/ ├── Happy/ ├── Sad/ ├── Surprise/ └── Neutral/
+/content/archive/ 
+├── train/ 
+│    ├── Angry/ 
+│    ├── Disgust/ 
+│    ├── Fear/ 
+│    ├── Happy/ 
+│    ├── Sad/ 
+│    ├── Surprise/ 
+│    └── Neutral/ 
+└── test/ 
+      ├── Angry/ 
+      ├── Disgust/
+      ├── Fear/ 
+      ├── Happy/ 
+      ├── Sad/ 
+      ├── Surprise/ 
+      └── Neutral/
 
 
 ### Installation
